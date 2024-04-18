@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 import toast from "react-hot-toast"; 
 import { Pencil, PlusCircle, VideoIcon } from "lucide-react";
 import { Chapter, MuxData } from "@prisma/client";
-import Image from "next/image"; 
 
 import { Button } from "@/components/ui/button";
 import { FileUpload } from "@/components/file-upload";
@@ -16,7 +15,7 @@ import { FileUpload } from "@/components/file-upload";
 interface ChapterVideoFormProps {
     initialData: Chapter & { muxData?: MuxData | null };
     courseId: string;
-    chapterId: string
+    chapterId: string;
 }
 
 const formSchema = z.object({
@@ -26,7 +25,7 @@ const formSchema = z.object({
 export const ChapterVideoForm = ({
     initialData,
     courseId,
-    chapterId
+    chapterId,
 }: ChapterVideoFormProps ) => {
     const router = useRouter();
     
