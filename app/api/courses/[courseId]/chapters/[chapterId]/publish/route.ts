@@ -2,7 +2,7 @@ import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
-export async function  PATCH(
+export async function PATCH(
     req: Request,
     { params } : { params: { chapterId: string, courseId: string }},
 ) {
